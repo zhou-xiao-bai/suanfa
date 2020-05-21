@@ -25,7 +25,7 @@ class Singleton2 {
 }
 //双重锁
 class Singleton3 {
-    private static Singleton3 instance;
+    private static volatile Singleton3 instance;
     private Singleton3() {}
     public static Singleton3 getSingleton() {
         if (instance==null) {
